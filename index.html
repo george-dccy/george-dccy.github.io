@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -83,25 +83,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
-<li>下载<a href="https://www.apachelounge.com/download/VC10/" target="_blank" rel="external">Apache</a>。</li>
-</ul>
-<blockquote>
-<p>必须保证Apache、Python以及WSGI都是用同一编译器编译的，因此选择VC10版本，这样兼容性最好。</p>
-</blockquote>
+        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h4 id="下载Apache。"><a href="#下载Apache。" class="headerlink" title="下载Apache。"></a>下载<a href="https://www.apachelounge.com/download/VC10/" target="_blank" rel="external">Apache</a>。</h4><p><em>必须保证Apache、Python以及WSGI都是用同一编译器编译的，因此选择VC10版本，这样兼容性最好。</em></p>
 <p>将Apache压缩包解压到C:\server\Apache24。</p>
-<ul>
-<li>下载<a href="https://www.python.org/downloads/release/python-343/" target="_blank" rel="external">Python3.4.3</a>。安装至C:\Python34\。<br>出现如下界面表示安装成功。</li>
-</ul>
+<h4 id="下载Python3-4-4。"><a href="#下载Python3-4-4。" class="headerlink" title="下载Python3.4.4。"></a>下载<a href="https://www.python.org/downloads/release/python-344/" target="_blank" rel="external">Python3.4.4</a>。</h4><p>安装至C:\Python34\。<br>出现如下界面表示安装成功。</p>
 <p><img src="/images/2016/07/pythonFirst.PNG" alt="Python First Command"></p>
-<ul>
-<li></li>
-</ul>
+<h4 id="安装Atom"><a href="#安装Atom" class="headerlink" title="安装Atom"></a>安装<a href="https://atom.io/" target="_blank" rel="external">Atom</a></h4><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装<a href="https://git-scm.com/" target="_blank" rel="external">Git</a></h4><h4 id="配置Apache"><a href="#配置Apache" class="headerlink" title="配置Apache"></a>配置Apache</h4><p>用Atom打开C:\server\Apache24\conf\http.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">快捷方法:</div><div class="line">在explorer中导航至C:\server\Apache24\conf\，右键空白处，选择“Git Bash Here”</div><div class="line">在命令行中输入：Atom http.conf即可。</div></pre></td></tr></table></figure>
+<p>做如下编辑：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ServerRoot：</div><div class="line">  ServerRoot <span class="string">"c:\Apache24"</span></div><div class="line">DocumentRoot:</div><div class="line">  DocumentRoot <span class="string">"d:\GitHub"</span></div><div class="line">  &lt;Directory <span class="string">"d:\GitHub"</span>&gt;</div><div class="line">    Options FollowSimLinks</div></pre></td></tr></table></figure></p>
+<h4 id="下载并配置wsgi模块"><a href="#下载并配置wsgi模块" class="headerlink" title="下载并配置wsgi模块"></a>下载并配置wsgi模块</h4><p>在<a href="https://github.com/GrahamDumpleton/mod_wsgi/releases?after=4.4.18" target="_blank" rel="external">这里</a>下载wsgi的windows编译版本（上面有提示：<code>Note: The last release for which Windows binaries was provided was 4.?.?.</code>）打开压缩包，找到：<code>\mod_wsgi-windows-4.4.12.tar.gz\mod_wsgi-windows-4.4.12.tar\mod_wsgi-windows-4.4.12\Apache24-win64-VC10\modules\mod_wsgi-py34-VC10.so</code>，拷贝到<code>%ApacheRoot%\modules</code>目录下，重命名为<code>mod_wsgi.so</code>，Atom打开httpd.conf，添加如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule wsgi_module modules/mod_wsgi.so</div></pre></td></tr></table></figure></p>
+<h4 id="测试Apache配置"><a href="#测试Apache配置" class="headerlink" title="测试Apache配置"></a>测试Apache配置</h4><p>在<code>%ApacheRoot%\bin</code>目录中使用命令行运行：<br><code>httpd -k install</code><br>手动安装Apache服务，并打开ApacheMonitor，试着启动Apache。在GitHub目录中新建index.html，输入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>如果成功，即可在<a href="http://localhost:80" target="_blank" rel="external">localhost</a>中看到结果。</p>
+<p><em>生成Markdown Writer的快捷键：command pallet: Markdown Writer: Create Default Keymaps</em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/05/knock/" data-id="ciqahe64j00019ko68cgv491y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/05/knock/" data-id="ciqaigiy60001moo6qh1dp8li" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/05/hello-world/" data-id="ciqahe64d00009ko651pc0sp5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/05/hello-world/" data-id="ciqaigixz0000moo6kbtb4vnx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +168,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li></ul>
     </div>
@@ -181,7 +178,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
