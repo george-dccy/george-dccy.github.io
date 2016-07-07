@@ -94,11 +94,17 @@
 <h4 id="测试Apache配置"><a href="#测试Apache配置" class="headerlink" title="测试Apache配置"></a>测试Apache配置</h4><p>在<code>%ApacheRoot%\bin</code>目录中使用命令行运行：<br><code>httpd -k install</code><br>手动安装Apache服务，并打开ApacheMonitor，试着启动Apache。在GitHub目录中新建index.html，输入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>如果成功，即可在<a href="http://localhost:80" target="_blank" rel="external">localhost</a>中看到结果。</p>
 <p><em>生成Markdown Writer的快捷键：command pallet: Markdown Writer: Create Default Keymaps</em></p>
+<h4 id="为Python安装flask扩展"><a href="#为Python安装flask扩展" class="headerlink" title="为Python安装flask扩展"></a>为Python安装flask扩展</h4><p>很简单，命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install flask</div></pre></td></tr></table></figure></p>
+<p>会把所有依赖包都安装完毕。</p>
+<h4 id="用flask创建简单的测试Web-App"><a href="#用flask创建简单的测试Web-App" class="headerlink" title="用flask创建简单的测试Web App"></a>用flask创建简单的测试Web App</h4><p>在GitHub目录下新建目录mcard，作为python flask站点根目录，目录中新建run.py：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#filename: run.py</span></div><div class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line"><span class="meta">@app.route('/')</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">return</span> <span class="string">"Hello Python"</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    app.run()</div></pre></td></tr></table></figure></p>
+<p>新建run.wsgi文件如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="comment">#Expand Python classed path with your own app's path</span></div><div class="line">sys.path.insert(<span class="number">0</span>, <span class="string">"d:/GitHub/mcard"</span>)</div><div class="line"><span class="keyword">from</span> run <span class="keyword">import</span> app</div><div class="line"><span class="comment">#Put logging code (and imports) here...</span></div><div class="line"></div><div class="line"><span class="comment">#Initialize WSGI app object</span></div><div class="line">application = app</div></pre></td></tr></table></figure></p>
+<p>_这里<code>application</code>一定不能改成别的，因为<code>mod_wsgi</code>在解析时只认<code>application</code>_</p>
+<h4 id="再次配置Apache"><a href="#再次配置Apache" class="headerlink" title="再次配置Apache"></a>再次配置Apache</h4><p>直接在conf文件中加入alias。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/05/knock/" data-id="ciqaigiy60001moo6qh1dp8li" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/05/knock/" data-id="ciqc6xqwv00003wo6yr1peqkq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/05/hello-world/" data-id="ciqaigixz0000moo6kbtb4vnx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/05/hello-world/" data-id="ciqc6xqx700013wo6mkjd2sej" class="article-share-link">Share</a>
       
       
     </footer>
