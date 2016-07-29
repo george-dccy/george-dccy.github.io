@@ -100,7 +100,7 @@
 123git config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george.dccy@gmai">
 <meta property="og:image" content="http://yoursite.com/images/2016/07/thinkpythonorigin.PNG">
 <meta property="og:image" content="http://yoursite.com/images/2016/07/thinkpythonindexoringin.PNG">
-<meta property="og:updated_time" content="2016-07-29T06:16:55.991Z">
+<meta property="og:updated_time" content="2016-07-29T06:19:19.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习Git笔记">
 <meta name="twitter:description" content="参考：iissnan的progit在线文档以及李笑来的git任务
@@ -333,12 +333,14 @@
 <li>本地已经操作，远程为空，需要将本地仓库推送给远程仓库</li>
 </ol>
 <p>第1种情况，可以直接添加remote:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd project</div><div class="line">git init</div><div class="line">git remote add -f -m master origin https://github.com/george-dccy/git-basics-tutorial.git</div><div class="line">git merge origin</div></pre></td></tr></table></figure></p>
-<p>这样，本地master会指向远程仓库的master，其他分支可以用<figure class="highlight plain"><figcaption><span>checkout -b <branchname> origin/<branchname>```来获取。</branchname></branchname></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">第2种情况，新建远程仓库，本地仓库操作：</div></pre></td></tr></table></figure></p>
-<p>git init<br>git commit -am ‘test’<br>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; 添加origin到本地，并push master到origin，同时建立track</div><div class="line"></div><div class="line">下面是官方给的方法：</div></pre></td></tr></table></figure></p>
-<p>echo “# tptest” &gt;&gt; README.md<br>git init<br>git add README.md<br>git commit -m “first commit”<br>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master</p>
-<p>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果本地已经有origin，又添加一个远程仓库，那么只要改变origin的名字，多加一个remote，后面的push也给这个remote即可。</div></pre></td></tr></table></figure></p>
-<p>git remote add test <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u test master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果要改回origin，则设置：</div></pre></td></tr></table></figure></p>
-<p>git branch –set-upstream-to=origin/master master<br>```</p>
+<p>这样，本地master会指向远程仓库的master，其他分支可以用<code>git checkout -b &lt;branchname&gt; origin/&lt;branchname&gt;</code>来获取。</p>
+<p>第2种情况，新建远程仓库，本地仓库操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git commit -am &apos;test&apos;</div><div class="line">git remote add origin https://github.com/george-dccy/tptest.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>添加origin到本地，并push master到origin，同时建立track</p>
+</blockquote>
+<p>下面是官方给的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">echo &quot;# tptest&quot; &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;first commit&quot;</div><div class="line">git remote add origin https://github.com/george-dccy/tptest.git</div><div class="line">git push -u origin master</div><div class="line"></div><div class="line">git remote add origin https://github.com/george-dccy/tptest.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<p>如果本地已经有origin，又添加一个远程仓库，那么只要改变origin的名字，多加一个remote，后面的push也给这个remote即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add test https://github.com/george-dccy/tptest.git</div><div class="line">git push -u test master</div></pre></td></tr></table></figure></p>
+<p>如果要改回origin，则设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch --set-upstream-to=origin/master master</div></pre></td></tr></table></figure></p>
 <p>[end]</p>
 
       
