@@ -84,27 +84,24 @@
 
 
 
-<meta name="description" content="学习Git笔记
-参考：iissnan的progit在线文档以及李笑来的git任务
+<meta name="description" content="参考：iissnan的progit在线文档以及李笑来的git任务
 
-在Windows平台安装Git在12345678#### 初运行的配置打开git bash，输入一些命令来配置：```gitgit config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george">
+在Windows平台安装Git在12345678#### 初运行的配置打开git bash，输入一些命令来配置：```gitgit config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george.dccy@gm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="george-dccy">
+<meta property="og:title" content="学习Git笔记">
 <meta property="og:url" content="http://yoursite.com/2016/07/26/learn and try Git/index.html">
 <meta property="og:site_name" content="george-dccy">
-<meta property="og:description" content="学习Git笔记
-参考：iissnan的progit在线文档以及李笑来的git任务
+<meta property="og:description" content="参考：iissnan的progit在线文档以及李笑来的git任务
 
-在Windows平台安装Git在12345678#### 初运行的配置打开git bash，输入一些命令来配置：```gitgit config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george">
+在Windows平台安装Git在12345678#### 初运行的配置打开git bash，输入一些命令来配置：```gitgit config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george.dccy@gm">
 <meta property="og:image" content="http://yoursite.com/images/2016/07/thinkpythonorigin.PNG">
 <meta property="og:image" content="http://yoursite.com/images/2016/07/thinkpythonindexoringin.PNG">
-<meta property="og:updated_time" content="2016-07-29T05:46:19.644Z">
+<meta property="og:updated_time" content="2016-07-29T05:53:30.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="george-dccy">
-<meta name="twitter:description" content="学习Git笔记
-参考：iissnan的progit在线文档以及李笑来的git任务
+<meta name="twitter:title" content="学习Git笔记">
+<meta name="twitter:description" content="参考：iissnan的progit在线文档以及李笑来的git任务
 
-在Windows平台安装Git在12345678#### 初运行的配置打开git bash，输入一些命令来配置：```gitgit config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george">
+在Windows平台安装Git在12345678#### 初运行的配置打开git bash，输入一些命令来配置：```gitgit config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george.dccy@gm">
 <meta name="twitter:image" content="http://yoursite.com/images/2016/07/thinkpythonorigin.PNG">
 
 
@@ -128,7 +125,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/07/26/learn and try Git/"/>
 
-  <title>  | george-dccy </title>
+  <title> 学习Git笔记 | george-dccy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -248,7 +245,7 @@
             
             
               
-                
+                学习Git笔记
               
             
           </h1>
@@ -288,8 +285,7 @@
       
 
       
-        <hr>
-<h2 id="学习Git笔记"><a href="#学习Git笔记" class="headerlink" title="学习Git笔记"></a>学习Git笔记</h2><blockquote>
+        <blockquote>
 <p>参考：iissnan的progit<a href="http://iissnan.com/progit/html/zh/ch1_6.html" target="_blank" rel="external">在线文档</a><br>以及李笑来的<a href="https://github.com/xiaolai/git-basics-tutorial" target="_blank" rel="external">git任务</a></p>
 </blockquote>
 <h3 id="在Windows平台"><a href="#在Windows平台" class="headerlink" title="在Windows平台"></a>在Windows平台</h3><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>在<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### 初运行的配置</div><div class="line">打开git bash，输入一些命令来配置：</div><div class="line"></div><div class="line">```git</div><div class="line">git config --global user.name &quot;george liu&quot;</div><div class="line">git config --global user.email &quot;george.dccy@gmail.com&quot;</div><div class="line">git config --global core.editor &quot;subl -w&quot;</div></pre></td></tr></table></figure></p>
@@ -311,21 +307,23 @@
 <p>再用<figure class="highlight plain"><figcaption><span>status```查看，文件会变绿色，等待确认。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">On branch master</div><div class="line"></div><div class="line">Initial commit</div><div class="line"></div><div class="line">Changes to be committed:</div><div class="line">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</div><div class="line"></div><div class="line">        new file:   back.png</div><div class="line">        new file:   index.html</div><div class="line">        new file:   index.html.1</div><div class="line">        new file:   next.png</div><div class="line">        new file:   thinkpython2.css</div><div class="line">        new file:   thinkpython2001.html</div><div class="line">        .</div><div class="line">        .</div><div class="line">        .</div><div class="line">        new file:   thinkpython2026.png</div><div class="line">        new file:   up.png</div></pre></td></tr></table></figure></p>
 <p>接下来，<figure class="highlight plain"><figcaption><span>commit```，弹出sublime text，可以看到之前```git status```出现的文字，再添加些自己的注释，保存关闭，即可。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">接下来是用sublime text进行范围移动、替换操作，先新建并移动到新分支</div></pre></td></tr></table></figure></p>
 <p>git checkout -b move-images-into-a-folder<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">接着范围移动</div></pre></td></tr></table></figure></p>
-<p>mkdir images<br>mv *.png images/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">再范围替换image：&lt;key&gt;shift&lt;/key&gt;+&lt;key&gt;ctrl&lt;/key&gt;+&lt;key&gt;F&lt;/key&gt;，</div><div class="line"></div><div class="line">&gt; find:</div><div class="line">&gt; ```img src=&quot;</div></pre></td></tr></table></figure></p>
+<p>mkdir images<br>mv *.png images/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">再范围替换image：&lt;key&gt;shift&lt;/key&gt;+&lt;key&gt;ctrl&lt;/key&gt;+&lt;key&gt;F&lt;/key&gt;，</div><div class="line"></div><div class="line">&gt; find:</div><div class="line">&gt;</div><div class="line">&gt; ```img src=&quot;</div></pre></td></tr></table></figure></p>
+<p>&gt;</p>
 <blockquote>
-<p>where:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; replace:</div><div class="line">&gt; ```img src=&quot;images/</div></pre></td></tr></table></figure></p>
+<p>where:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;</div><div class="line">&gt; replace:</div><div class="line">&gt;</div><div class="line">&gt; ```img src=&quot;images/</div></pre></td></tr></table></figure>
 </blockquote>
 <p>替换完成。提交该分支，并将分支合并到master分支中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -am &apos;move images into a folder&apos;</div><div class="line">git checkout master</div><div class="line">git merge move-images-into-a-folder</div><div class="line">git log</div></pre></td></tr></table></figure></p>
 <p>如果需要将本地分支提交到远程，让远程仓库和本地一样有其他分支，需要：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push --all origin</div></pre></td></tr></table></figure></p>
 <p>即把本地的所有分支提交到远程origin上。</p>
 <p>如果事先没有clone远程仓库，而是直接在本地新建仓库并初始化，分两种情况：</p>
 <ol>
-<li>本地为空，需要clone远程仓库 </li>
-<li>本地已经操作，远程为空，需要将本地仓库推送给远程仓库<br>第1种情况，可以直接添加remote:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd project</div><div class="line">git init</div><div class="line">git remote add -f -m master origin https://github.com/george-dccy/git-basics-tutorial.git</div><div class="line">git merge origin</div></pre></td></tr></table></figure>
-</li>
+<li>本地为空，需要clone远程仓库</li>
+<li>本地已经操作，远程为空，需要将本地仓库推送给远程仓库</li>
 </ol>
-<p>这样，本地master会指向远程仓库的master，其他分支可以用<figure class="highlight plain"><figcaption><span>checkout -b <branchname> origin/<branchname>```来获取。</branchname></branchname></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">第2种情况，新建远程仓库，本地仓库操作：</div></pre></td></tr></table></figure></p>
-<p>git init<br>git commit -am ‘test’<br>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; 添加origin到本地，并push master到origin，同时建立track</div><div class="line">下面是官方给的方法：</div></pre></td></tr></table></figure></p>
+<p>第1种情况，可以直接添加remote:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd project</div><div class="line">git init</div><div class="line">git remote add -f -m master origin https://github.com/george-dccy/git-basics-tutorial.git</div><div class="line">git merge origin</div></pre></td></tr></table></figure></p>
+<p>这样，本地master会指向远程仓库的master，其他分支可以用<figure class="highlight plain"><figcaption><span>checkout -b <branchname> origin/<branchname>```来获取。</branchname></branchname></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">第2种情况，新建远程仓库，本地仓库操作：</div></pre></td></tr></table></figure></p>
+<p>git init<br>git commit -am ‘test’<br>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; 添加origin到本地，并push master到origin，同时建立track</div><div class="line"></div><div class="line">下面是官方给的方法：</div></pre></td></tr></table></figure></p>
 <p>echo “# tptest” &gt;&gt; README.md<br>git init<br>git add README.md<br>git commit -m “first commit”<br>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master</p>
 <p>git remote add origin <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u origin master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果本地已经有origin，又添加一个远程仓库，那么只要改变origin的名字，多加一个remote，后面的push也给这个remote即可。</div></pre></td></tr></table></figure></p>
 <p>git remote add test <a href="https://github.com/george-dccy/tptest.git" target="_blank" rel="external">https://github.com/george-dccy/tptest.git</a><br>git push -u test master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果要改回origin，则设置：</div></pre></td></tr></table></figure></p>
@@ -462,7 +460,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习Git笔记"><span class="nav-number">1.</span> <span class="nav-text">学习Git笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在Windows平台"><span class="nav-number">1.1.</span> <span class="nav-text">在Windows平台</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载wget"><span class="nav-number">1.1.2.</span> <span class="nav-text">下载wget</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化git"><span class="nav-number">1.1.3.</span> <span class="nav-text">初始化git</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在Windows平台"><span class="nav-number">1.</span> <span class="nav-text">在Windows平台</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">1.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载wget"><span class="nav-number">1.2.</span> <span class="nav-text">下载wget</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化git"><span class="nav-number">1.3.</span> <span class="nav-text">初始化git</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
