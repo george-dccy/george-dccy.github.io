@@ -100,7 +100,7 @@
 123git config --global user.name &amp;quot;george liu&amp;quot;git config --global user.email &amp;quot;george.dccy@gmai">
 <meta property="og:image" content="http://yoursite.com/images/2016/07/thinkpythonorigin.PNG">
 <meta property="og:image" content="http://yoursite.com/images/2016/07/thinkpythonindexoringin.PNG">
-<meta property="og:updated_time" content="2016-07-29T06:19:19.981Z">
+<meta property="og:updated_time" content="2016-07-29T06:21:01.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习Git笔记">
 <meta name="twitter:description" content="参考：iissnan的progit在线文档以及李笑来的git任务
@@ -333,7 +333,9 @@
 <li>本地已经操作，远程为空，需要将本地仓库推送给远程仓库</li>
 </ol>
 <p>第1种情况，可以直接添加remote:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd project</div><div class="line">git init</div><div class="line">git remote add -f -m master origin https://github.com/george-dccy/git-basics-tutorial.git</div><div class="line">git merge origin</div></pre></td></tr></table></figure></p>
-<p>这样，本地master会指向远程仓库的master，其他分支可以用<code>git checkout -b &lt;branchname&gt; origin/&lt;branchname&gt;</code>来获取。</p>
+<p>这样，本地master会指向远程仓库的master，其他分支可以用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b &lt;branchname&gt; origin/&lt;branchname&gt;</div></pre></td></tr></table></figure>
+<p>来获取。</p>
 <p>第2种情况，新建远程仓库，本地仓库操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git commit -am &apos;test&apos;</div><div class="line">git remote add origin https://github.com/george-dccy/tptest.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>添加origin到本地，并push master到origin，同时建立track</p>
