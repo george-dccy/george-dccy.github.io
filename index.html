@@ -282,12 +282,15 @@
             <blockquote>
 <p>参考：iissnan的progit<a href="http://iissnan.com/progit/html/zh/ch1_6.html" target="_blank" rel="external">在线文档</a><br>以及李笑来的<a href="https://github.com/xiaolai/git-basics-tutorial" target="_blank" rel="external">git任务</a></p>
 </blockquote>
-<h3 id="在Windows平台"><a href="#在Windows平台" class="headerlink" title="在Windows平台"></a>在Windows平台</h3><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>在<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### 初运行的配置</div><div class="line">打开git bash，输入一些命令来配置：</div><div class="line"></div><div class="line">```git</div><div class="line">git config --global user.name &quot;george liu&quot;</div><div class="line">git config --global user.email &quot;george.dccy@gmail.com&quot;</div><div class="line">git config --global core.editor &quot;subl -w&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="在Windows平台"><a href="#在Windows平台" class="headerlink" title="在Windows平台"></a>在Windows平台</h3><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>在<a href="http://msysgit.github.com/" target="_blank" rel="external">mysygit</a>下载安装。</p>
+<h4 id="初运行的配置"><a href="#初运行的配置" class="headerlink" title="初运行的配置"></a>初运行的配置</h4><p>打开git bash，输入一些命令来配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;george liu&quot;</div><div class="line">git config --global user.email &quot;george.dccy@gmail.com&quot;</div><div class="line">git config --global core.editor &quot;subl -w&quot;</div></pre></td></tr></table></figure>
 <blockquote>
 <p>这里用-w参数，让git等待文本编辑结束后再commit</p>
 </blockquote>
 <h4 id="下载wget"><a href="#下载wget" class="headerlink" title="下载wget"></a>下载wget</h4><p>在这里下载安装版：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">添加环境变量```C:\Program Files (x86)\GnuWin32\bin</div></pre></td></tr></table></figure></p>
-<p>使用wget来下载要改变的原文：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -r -np -k -nd http://greenteapress.com/thinkpython2/html/</div></pre></td></tr></table></figure></p>
+<p>使用wget来下载要改变的原文：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -r -np -k -nd http://greenteapress.com/thinkpython2/html/</div></pre></td></tr></table></figure>
 <blockquote>
 <p>参数的意思：-r: –recursive 递归下载; -np: –no-parent 不搜索上层目录; -k: –convert-links 将绝对链接转换为相对链接; -nd: –no-directories 不创建目录。</p>
 </blockquote>
